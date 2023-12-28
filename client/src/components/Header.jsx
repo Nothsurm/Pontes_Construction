@@ -1,12 +1,23 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
     const [showMenu, setShowMenu] = useState(false);
+    const [navbar, setNavbar] = useState(false);
+
+    const changeBackground = () => {
+        if (window.scrollY >= 80) {
+            setNavbar(true)
+        } else {
+            setNavbar(false)
+        }
+    }
+
+    window.addEventListener('scroll', changeBackground)
 
   return (
-    <header className='bg-slate-200 shadow-md'>
-        <div className="flex justify-around items-center h-[150px]">
+    <header className={navbar ? 'fixed top-0 z-30 w-full bg-slate-200' : 'fixed top-0 z-30 w-full'}>
+        <div className='flex justify-around items-center h-[100px]'>
             <Link to='/'>
                 <h1 className='font-bold text-sm sm:text-xl flex flex-wrap flex-col text-center'>
                     <span className='text-red-700 text-3xl uppercase'>Pontes</span>
@@ -14,18 +25,18 @@ export default function Header() {
                     <span className='text-xs'>Contractors</span>
                 </h1>
             </Link>
-            <ul className='flex gap-5 invisible md:visible flex-wrap flex-col md:flex-row lg:flex-row'>
+            <ul className='flex gap-8 invisible md:visible flex-wrap flex-col md:flex-row lg:flex-row'>
                 <Link to='/'>
-                    <li className='text-slate-700 hover:underline cursor-pointer'>Home</li>
+                    <li className='text-slate-900 hover:underline cursor-pointer font-bold'>Home</li>
                 </Link>
                 <Link to='/about'>
-                    <li className='text-slate-700 hover:underline cursor-pointer'>About</li>
+                    <li className='text-slate-900 hover:underline cursor-pointer font-bold'>About</li>
                 </Link>
                 <Link to='/testimonial'>
-                    <li className='text-slate-700 hover:underline cursor-pointer'>Testimonials</li>
+                    <li className='text-slate-900 hover:underline cursor-pointer font-bold'>Testimonials</li>
                 </Link>
                 <Link to='/contact'>
-                    <li className='text-slate-700 hover:underline cursor-pointer'>Contact</li>
+                    <li className='text-slate-900 hover:underline cursor-pointer font-bold'>Contact</li>
                 </Link>
             </ul>
             <button 
