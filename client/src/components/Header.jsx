@@ -16,7 +16,7 @@ export default function Header() {
     window.addEventListener('scroll', changeBackground)
 
   return (
-    <header className={navbar ? 'fixed top-0 z-30 w-full bg-slate-200' : 'fixed top-0 z-30 w-full'}>
+    <header className={navbar ? 'fixed top-0 z-30 w-full bg-slate-200 transition-all duration-200' : 'fixed top-0 z-30 w-full transition-all duration-200'}>
         <div className='flex justify-around items-center h-[100px]'>
             <Link to='/'>
                 <h1 className='font-bold text-sm sm:text-xl flex flex-wrap flex-col text-center'>
@@ -27,16 +27,16 @@ export default function Header() {
             </Link>
             <ul className='flex gap-8 invisible md:visible flex-wrap flex-col md:flex-row lg:flex-row'>
                 <Link to='/'>
-                    <li className='text-slate-900 hover:underline cursor-pointer font-bold'>Home</li>
+                <li className='text-slate-900 hover:opacity-50 transition ease-in-out delay-50 cursor-pointer font-bold'>Home</li>
                 </Link>
                 <Link to='/about'>
-                    <li className='text-slate-900 hover:underline cursor-pointer font-bold'>About</li>
+                    <li className='text-slate-900 hover:opacity-50 transition ease-in-out delay-50 cursor-pointer font-bold'>About</li>
                 </Link>
                 <Link to='/testimonial'>
-                    <li className='text-slate-900 hover:underline cursor-pointer font-bold'>Testimonials</li>
+                    <li className='text-slate-900 hover:opacity-50 transition ease-in-out delay-50 cursor-pointer font-bold'>Testimonials</li>
                 </Link>
                 <Link to='/contact'>
-                    <li className='text-slate-900 hover:underline cursor-pointer font-bold'>Contact</li>
+                    <li className='text-slate-900 hover:opacity-50 transition ease-in-out delay-50 cursor-pointer font-bold'>Contact</li>
                 </Link>
             </ul>
             <button 
