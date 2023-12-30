@@ -58,12 +58,12 @@ export default function Home() {
             <p className='text-slate-700'>We have been in the construction sector for more than <span className='font-bold'>30 years</span> and have been adequately trained to provide the <span className='font-bold'>best services in the most effective way</span> at an affordable price</p><br /><br />
             <p className='text-slate-700'>Please do not hesitate to contact us directly through our contact form and we will reply to your request promptly, or telephone us directly for an immediate response.</p>
           <div className="flex flex-row flex-wrap gap-14 mt-5">
-            <div>
+            <div className='items-center mt-1'>
               <Link to='/contact'>
                 <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>Contact Us</button> 
               </Link>
             </div>
-            <div className="flex flex-row gap-3 mt-3">
+            <div className="flex flex-row gap-2 mt-1 items-center">
               <FaPhoneAlt /> <p>77-555-0000</p>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function Home() {
       <div className="w=full mt-10">
         <div style={{ background: "url('https://cdn.pixabay.com/photo/2016/11/29/03/53/house-1867187_1280.jpg') center no-repeat", backgroundSize:'cover'}} className="h-[300px] opacity-60 w-full"></div>
       </div>
-      <div className="flex flex-row justify-around m-20 gap-5 flex-wrap">
+      <div className="flex flex-row justify-around m-16 gap-5 flex-wrap">
         <div className="bg-white shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg w-full sm:w-[330px]">
           <img src="https://acropolis-wp-content-uploads.s3.us-west-1.amazonaws.com/communication-in-construction-hero-2.webp" alt="construction workers" className='h=[320px] sm:h-[220px] w-full object-cover hover:scale-105 transition-scale duration-300'/>
           <div className="p-3 flex flex-col gap-2 w-full">

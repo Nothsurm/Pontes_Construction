@@ -29,9 +29,6 @@ export default function Header() {
                 <Link to='/'>
                 <li className='text-slate-900 hover:opacity-50 transition ease-in-out delay-50 cursor-pointer font-bold'>Home</li>
                 </Link>
-                <Link to='/about'>
-                    <li className='text-slate-900 hover:opacity-50 transition ease-in-out delay-50 cursor-pointer font-bold'>About</li>
-                </Link>
                 <Link to='/testimonial'>
                     <li className='text-slate-900 hover:opacity-50 transition ease-in-out delay-50 cursor-pointer font-bold'>Testimonials</li>
                 </Link>
@@ -59,12 +56,6 @@ export default function Header() {
                         className='text-slate-400 w-full text-center py-6 hover:opacity-90'
                         onClick={() => setShowMenu(false)}>
                         Home
-                    </Link>
-                    <Link 
-                        to='/about' 
-                        className='text-slate-400 w-full text-center py-6 hover:opacity-90' 
-                        onClick={() => setShowMenu(false)}>
-                        About
                     </Link>
                     <Link 
                         to='/testimonial' 
