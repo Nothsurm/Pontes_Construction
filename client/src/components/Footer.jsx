@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md";
 
 export default function () {
   return (
-    <div className='w-full bg-slate-900 lg:h-[200px] sm:h-[300px]'>
+    <div className='w-full bg-slate-800 lg:h-[200px] sm:h-[300px]'>
         <div className="flex flex-row justify-around flex-wrap">
             <h1 className='font-bold text-sm sm:text-xl flex flex-wrap flex-col text-center mt-10 max-w-36'>
                 <span className='text-red-700 text-3xl uppercase'>Pontes</span>

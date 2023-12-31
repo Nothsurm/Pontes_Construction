@@ -1,7 +1,9 @@
 import { TypeAnimation } from 'react-type-animation'
+import { useState } from 'react';
 import { Parallax } from 'react-parallax';
 import { Link } from 'react-router-dom';
 import { FaPhoneAlt } from "react-icons/fa";
+import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import ImageParallax from '../img/parallax-img.jpg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore from 'swiper'
@@ -9,7 +11,43 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css/bundle';
 
 export default function Home() {
+  const quotes = [{
+    quote: '"David did a wonderful job on our house refurbishment - he was resourceful, creative, hard working and provided excellent workmanship - no request was too much problem for him. Great job and will use them again." - Mark L'
+  },
+  {
+    quote: '"David was very quick to respond to our enquiry and within 24 hours we had our existing original windows recalibrated and adjusted and working perfectly, with an order placed for additional matching units. Extremely happy to recommend." - Amy C'
+  },
+  {
+    quote: '"We used Pontes Building Contractors for a kitchen remodel. The team were highly professional and managed a clean and tidy site. The work was faultless and we are extremely happy with the fantastic result. Would highly recommend." - Mike T'
+  },
+  {
+    quote: '"I contacted Pontes Building Contractors for some long overdue garden work, David was very approchable and performed the job seamlessly. I will definitely be back in contact with them for any future work around my house." - Lee F'
+  },
+  {
+    quote: '"David is a very hard worker, we had a big job on a kitchen unit that needed completing in 2 days, he completed the job within the time frame to a high standard. If you need a job doing promptly, Pontes Building Contractors is the way to go. - Dani W"'
+  },
+{
+
+}];
+
+const [currentIndex, setCurrentIndex] = useState(0)
+
+const prevSlide = () => {
+  const isFirstSlide = currentIndex === 0;
+  const newIndex = isFirstSlide ? quotes.length -1 : currentIndex -1;
+  setCurrentIndex(newIndex)
+}
+
+console.log(currentIndex);
+
+const nextSlide = () => {
+  const isLastSlide = currentIndex === quotes.length -1;
+  const newIndex = isLastSlide ? 0 : currentIndex +1;
+  setCurrentIndex(newIndex)
+};
+
   SwiperCore.use([Navigation])
+
   return (
     <div>
       <Parallax bgImage={ImageParallax} bgImageAlt="background-img" strength={900}>
@@ -112,8 +150,19 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      {/* Footer(legal, cookies) */}
+      <div className="flex justify-center">
+        <div className="w-full max-w-4xl text-center text-white relative group">
+          <div className="py-10 px-10 lg:h-[150px] sm:h-[300px] bg-slate-900 m-10 rounded-lg flex flex-col justify-center">
+            {quotes[currentIndex].quote}
+          </div>
+          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-10 cursor-pointer">
+            <BsChevronCompactLeft onClick={prevSlide} size={30} />
+          </div>
+          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-10 cursor-pointer">
+            <BsChevronCompactRight onClick={nextSlide} size={30} />
+          </div>
+        </div>
+      </div>
       </Parallax>
     </div>
   )
