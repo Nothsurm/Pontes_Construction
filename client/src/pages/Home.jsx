@@ -116,7 +116,7 @@ const nextSlide = () => {
           </div>
         </div>
         <div className="mt-4">
-          <img src={Van} alt="image of work van" className='hidden md:block rounded-lg scale-75'/>
+          <img src={Van} alt="image of work van" className='hidden md:block rounded-lg scale-75 hover:scale-90 transition duration-500'/>
         </div>
       </div>
       <div className="w=full mt-10">
@@ -162,7 +162,7 @@ const nextSlide = () => {
       </div>
       <div className="flex justify-center">
         <div className="w-full max-w-4xl text-center text-white relative group">
-          <div className="py-10 px-10 lg:h-[150px] sm:h-[300px] bg-slate-900 m-10 rounded-lg flex flex-col justify-center">
+          <div className="py-10 px-10 lg:h-[150px] sm:h-[300px] bg-slate-900 m-10 rounded-lg flex flex-col justify-center hover:opacity-90 transition duration-300">
             {quotes[currentIndex].quote}
           </div>
           <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-10 cursor-pointer">
