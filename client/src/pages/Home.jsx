@@ -34,14 +34,12 @@ const [currentIndex, setCurrentIndex] = useState(0)
 
 const prevSlide = () => {
   const isFirstSlide = currentIndex === 0;
-  const newIndex = isFirstSlide ? quotes.length -1 : currentIndex -1;
+  const newIndex = isFirstSlide ? quotes.length -2 : currentIndex -1;
   setCurrentIndex(newIndex)
 }
 
-console.log(currentIndex);
-
 const nextSlide = () => {
-  const isLastSlide = currentIndex === quotes.length -1;
+  const isLastSlide = currentIndex === quotes.length -2;
   const newIndex = isLastSlide ? 0 : currentIndex +1;
   setCurrentIndex(newIndex)
 };
