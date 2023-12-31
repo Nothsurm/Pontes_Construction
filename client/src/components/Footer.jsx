@@ -11,12 +11,12 @@ export default function () {
                 <span className='text-xs text-white'>Building</span>
                 <span className='text-xs text-white'>Contractors</span>
             </h1>
-            <div className="mt-10 flex flex-col text-white gap-5 max-w-36">
+            <div className="mt-10 flex flex-col text-white gap-5 max-w-36 items-center">
                 <div className="flex flex-row gap-3 items-center">
-                    <FaPhoneAlt /><p>777 555 0000</p>
+                    <FaPhoneAlt /><p>927 493 253</p>
                 </div>
                 <div className="flex flex-row gap-3 items-center">
-                    <MdEmail /><p>hhh@gmail.com</p>
+                    <MdEmail /><p>pontesbuildingcon@gmail.com</p>
                 </div>
             </div>
             <div className="mt-10 flex flex-col flex-wrap items-center text-white gap-5 max-w-36">

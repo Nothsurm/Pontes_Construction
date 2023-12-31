@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { FaPhoneAlt } from "react-icons/fa";
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import ImageParallax from '../img/parallax-img.jpg';
+import Van from '../img/van.jpg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore from 'swiper'
 import { Navigation } from 'swiper/modules';
@@ -56,13 +57,23 @@ const nextSlide = () => {
           </div>
           <TypeAnimation className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold uppercase text-4xl font-mono bg-slate-400 p-4 rounded-lg bg-opacity-60'
             sequence={[
-              'We are experts in Carpenting',
-              1000,
-              'We are experts in Plumbing',
-              1000,
-              'We are experts in Drywalling',
-              1000,
               'We are experts in Roofing',
+              1000,
+              'We are experts in Guttering',
+              1000,
+              'We are experts in Brickwork',
+              1000,
+              'We are experts in Joinery',
+              1000,
+              'We are experts in Dry Stone Walling',
+              1000,
+              'We are experts in Painting',
+              1000,
+              'We are experts in Decorating',
+              1000,
+              'We are experts in Garden Maintenance',
+              1000,
+              'We are experts in Kitchen and Bathroom Tiling',
               1000,
             ]}
             speed={10}
@@ -100,11 +111,12 @@ const nextSlide = () => {
               </Link>
             </div>
             <div className="flex flex-row gap-2 mt-1 items-center">
-              <FaPhoneAlt /> <p>77-555-0000</p>
+              <FaPhoneAlt /> <p>927 493 253</p>
             </div>
           </div>
         </div>
-        <div style={{ background: "url('https://cdn.pixabay.com/photo/2017/08/03/21/37/construction-2578410_1280.jpg') center no-repeat"}} className="lg:h-[500px] lg:w-[500px] md:h-[400px] md:w-[400px] sm:h-[300px] sm:w-[300px] rounded-full sm:visible">
+        <div className="mt-4">
+          <img src={Van} alt="image of work van" className='hidden md:block rounded-lg scale-75'/>
         </div>
       </div>
       <div className="w=full mt-10">
@@ -122,21 +134,21 @@ const nextSlide = () => {
           <div className="p-3 flex flex-col gap-2 w-full">
             <p className='text-lg font-bold text-slate-700'>Our services include:</p>
             <div className="flex flex-row flex-wrap gap-2">
-              <p className='text-md font-semibold text-slate-700'>Bricklaying</p>
+              <p className='text-md font-semibold text-slate-700'>Brickwork</p>
               <p className='text-md font-semibold text-slate-400'>||</p>
               <p className='text-md font-semibold text-slate-700'>Roofing</p>
               <p className='text-md font-semibold text-slate-400'>||</p>
-              <p className='text-md font-semibold text-slate-700'>Drywalling</p>
+              <p className='text-md font-semibold text-slate-700'>Joinery</p>
               <p className='text-md font-semibold text-slate-400'>||</p>
               <p className='text-md font-semibold text-slate-700'>Painting</p>
               <p className='text-md font-semibold text-slate-400'>||</p>
               <p className='text-md font-semibold text-slate-700'>Tiling</p>
               <p className='text-md font-semibold text-slate-400'>||</p>
-              <p className='text-md font-semibold text-slate-700'>Insulation</p>
+              <p className='text-md font-semibold text-slate-700'>Garden Maintenance</p>
               <p className='text-md font-semibold text-slate-400'>||</p>
-              <p className='text-md font-semibold text-slate-700'>Ceiling Fixer</p>
+              <p className='text-md font-semibold text-slate-700'>Dry Stone Walling</p>
               <p className='text-md font-semibold text-slate-400'>||</p>
-              <p className='text-md font-semibold text-slate-700'>Carpenter</p>
+              <p className='text-md font-semibold text-slate-700'>Guttering</p>
             </div>
           </div>
         </div>

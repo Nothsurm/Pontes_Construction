@@ -5,32 +5,6 @@ import ImageParallax from '../img/parallax-img.jpg';
 
 export default function Contact() {
 
-  let map;
-
-async function initMap() {
-  // The location of Uluru
-  const position = { lat: -25.344, lng: 131.031 };
-  // Request needed libraries.
-  //@ts-ignore
-  const { Map } = await google.maps.importLibrary("maps");
-  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-
-  // The map, centered at Uluru
-  map = new Map(document.getElementById("map"), {
-    zoom: 4,
-    center: position,
-    mapId: "DEMO_MAP_ID",
-  });
-
-  // The marker, positioned at Uluru
-  const marker = new AdvancedMarkerElement({
-    map: map,
-    position: position,
-    title: "Uluru",
-  });
-}
-
-initMap();
   return (
     <div>
       <Parallax bgImage={ImageParallax} bgImageAlt="background-img" strength={900}>
@@ -40,12 +14,12 @@ initMap();
             <div className="flex flex-col gap-5 justify-center lg:ml-32 md:ml-18 sm:ml-4">
               <h1 className='text-4xl font-semibold'>Contact Us</h1>
               <p className='text-slate-800'>If you have any questions, please do not hesitate to get in contact with us by email, phone or simply fill in the form on the right.</p>
-              <div className="mt-10 flex flex-col gap-5 max-w-36">
+              <div className="mt-10 flex flex-col gap-5 max-w-64">
                 <div className="flex flex-row gap-3 items-center">
-                    <FaPhoneAlt className="text-red-700"/><p>777 555 0000</p>
+                    <FaPhoneAlt className="text-red-700"/><p>927 493 253</p>
                 </div>
                 <div className="flex flex-row gap-3 items-center">
-                    <MdEmail className="text-red-700"/><p>hhh@gmail.com</p>
+                  <MdEmail className="text-red-700"/><p clas>pontesbuildingcon@gmail.com</p>
                 </div>
                 <div className="flex flex-row gap-3 items-center mt-8">
                   <a href="https://www.facebook.com/" target="_blank"><FaFacebook className="text-3xl"/></a>
@@ -58,15 +32,15 @@ initMap();
               <form className="flex flex-col px-4 py-4 gap-8">
                 <div className="flex flex-col gap-1">
                   <label htmlFor="full-name">Full Name:</label>
-                  <input type="text" placeholder='Enter your name here...' id='full-name' className="p-2 rounded-md" autocomplete='off'/>
+                  <input type="text" placeholder='Enter your name here...' id='full-name' className="p-2 rounded-md" autoComplete='off'/>
                 </div>
                 <div className="flex flex-col gap-1">
                   <label htmlFor="email">Email:</label>
-                  <input type="text" placeholder='Enter your e-mail here...' id='email' className="p-2 rounded-md" autocomplete='off'/>
+                  <input type="text" placeholder='Enter your e-mail here...' id='email' className="p-2 rounded-md" autoComplete='off'/>
                 </div>
                 <div className="flex flex-col gap-1">
                   <label htmlFor="message">Message:</label>
-                  <textarea placeholder='Enter your e-mail here...' id='message' className="p-2 rounded-md" autocomplete='off' rows='5'></textarea>
+                  <textarea placeholder='Enter your e-mail here...' id='message' className="p-2 rounded-md" autoComplete='off' rows='5'></textarea>
                 </div>
                 <div className="">
                   <button type='submit' className='bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 rounded'>Send Message</button> 
