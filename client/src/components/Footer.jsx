@@ -14,9 +14,9 @@ export default function () {
                 <span className='text-xs text-white'>Contractors</span>
             </h1>
             </Link>
-            <div className="mt-10 flex flex-col text-white gap-5 max-w-36 items-center">
+            <div className="mt-10 flex flex-col flex-wrap text-white gap-5 items-center text-center">
                 <div className="flex flex-row gap-3 items-center">
-                    <FaPhoneAlt /><p>927 493 253</p>
+                    <FaPhoneAlt /><p>+351 927 493 253</p>
                 </div>
                 <div className="flex flex-row gap-3 items-center">
                     <MdEmail /><p>pontesbuildingcon@gmail.com</p>
