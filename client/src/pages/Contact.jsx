@@ -11,7 +11,7 @@ export default function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_dps4rhe', 'template_57pd33e', form.current, '9r7RsIEdshDicrX3D')
+    emailjs.sendForm(import.meta.env.service_ID, import.meta.env.template_ID, form.current, import.meta.env.public_key)
       .then((result) => {
           setSendMessage("success")
           e.target.reset()
