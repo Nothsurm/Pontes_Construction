@@ -33,7 +33,7 @@ export default function Contact() {
               <p className='text-slate-800'>If you have any questions, please do not hesitate to get in contact with us by email, phone or simply fill in the form on the right.</p>
               <div className="mt-10 flex flex-col gap-5 max-w-64">
                 <div className="flex flex-row gap-3 items-center">
-                    <FaPhoneAlt className="text-red-700"/><p>+351 927 493 253</p>
+                    <FaPhoneAlt className="text-red-700"/><p>927 493 253</p>
                 </div>
                 <div className="flex flex-row gap-3 items-center">
                   <MdEmail className="text-red-700"/><p clas>pontesbuildingcon@gmail.com</p>

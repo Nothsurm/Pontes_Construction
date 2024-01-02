@@ -111,7 +111,7 @@ const nextSlide = () => {
               </Link>
             </div>
             <div className="flex flex-row gap-2 mt-1 items-center">
-              <FaPhoneAlt /> <p>+351 927 493 253</p>
+              <FaPhoneAlt /> <p>927 493 253</p>
             </div>
           </div>
         </div>
