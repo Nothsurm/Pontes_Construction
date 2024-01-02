@@ -4,6 +4,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Route path='/' element={<Home />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
         <Route path='/services' element={<Services />}></Route>
+        <Route path='/policy' element={<PrivacyPolicy />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>

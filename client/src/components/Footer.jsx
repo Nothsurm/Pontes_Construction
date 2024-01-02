@@ -23,8 +23,10 @@ export default function () {
                 </div>
             </div>
             <div className="mt-10 flex flex-col flex-wrap items-center text-white gap-5 max-w-36">
-                <a href="https://www.facebook.com/" target="_blank"><FaFacebook/></a>
-                <p>Privacy Policy</p>
+                <a className='hover:opacity-90' href="https://www.facebook.com/" target="_blank"><FaFacebook/></a>
+                <Link to='/policy'>
+                    <p className="hover:opacity-90">Privacy Policy</p>
+                </Link>
             </div>
         </div>
         <div className="mt-14 flex flex-wrap justify-center text-center text-white">
