@@ -31,12 +31,12 @@ export default function Contact() {
             <div className="flex flex-col gap-5 justify-center m-14">
               <h1 className='text-4xl font-semibold'>Contact Us</h1>
               <p className='text-slate-800'>If you have any questions, please do not hesitate to get in contact with us by email, phone or simply fill in the form on the right.</p>
-              <div className="mt-10 flex flex-col gap-5 max-w-64">
+              <div className="mt-10 flex flex-col gap-5">
                 <div className="flex flex-row gap-3 items-center">
                     <FaPhoneAlt className="text-red-700"/><p>927 493 253</p>
                 </div>
                 <div className="flex flex-row gap-3 items-center">
-                  <MdEmail className="text-red-700"/><p clas>pontesbuildingcon@gmail.com</p>
+                  <MdEmail className="text-red-700"/><p>pontesbuildingcon@gmail.com</p>
                 </div>
                 <div className="flex flex-row gap-3 items-center mt-8">
                   <a href="https://www.facebook.com/" target="_blank"><FaFacebook className="text-3xl"/></a>
