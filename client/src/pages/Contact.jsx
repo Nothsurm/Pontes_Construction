@@ -28,7 +28,7 @@ export default function Contact() {
       <div className="mt-48 font-serif">
         <div className="flex flex-row flex-wrap w-full justify-center">
           <div className="lg:w-1/2 flex flex-wrap"> 
-            <div className="flex flex-col gap-5 justify-center lg:ml-32 md:ml-18 sm:ml-4">
+            <div className="flex flex-col gap-5 justify-center m-14">
               <h1 className='text-4xl font-semibold'>Contact Us</h1>
               <p className='text-slate-800'>If you have any questions, please do not hesitate to get in contact with us by email, phone or simply fill in the form on the right.</p>
               <div className="mt-10 flex flex-col gap-5 max-w-64">

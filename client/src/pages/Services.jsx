@@ -148,7 +148,7 @@ export default function Services() {
             </div>
           </div>
           <div className="flex flex-row justify-center mt-20">
-            <div className="flex flex-row flex-wrap justify-center max-w-8xl gap-3">
+            <div className="flex flex-row flex-wrap-reverse justify-center max-w-8xl gap-3">
               <div className="bg-white rounded-lg max-w-xl px-10 py-3 hover:bg-slate-100 transition duration-300 ease-in-out">
                 <h1 className='text-center font-bold uppercase text-2xl py-6'>Pointing Walls</h1>
                 <p className='text-center'>We grinded the stone walls and pointed the full house, this includes cleaning the bricks and filling the cement holes.</p>
@@ -196,10 +196,10 @@ export default function Services() {
         </div>
         <div className="flex justify-center mt-10">
           <div className="bg-slate-900 lg:w-1/2 h-[200px] sm:w-full flex flex-row justify-around flex-wrap items-center p-2 rounded-md">
-            <div className="text-center">
+            <div className="text-center w-1/2">
               <p className="text-white font-bold text-xl">Ask for a Quote!</p>
             </div>
-            <div className="text-center flex justify-center">
+            <div className="text-center flex justify-center w-1/2">
               <Link to='/contact'>
                 <button className="flex flex-row items-center gap-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Contact Us <FaArrowRight /></button>
               </Link>
