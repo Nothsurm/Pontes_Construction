@@ -97,7 +97,7 @@ const nextSlide = () => {
       {/* Information */}
       <div className="flex flex-row flex-wrap justify-center items-center">
         <div className="font-serif text-left max-w-screen-md text-xl m-20">
-          <p className='mb-10 text-slate-500'>Welcome to <span className='font-bold underline'>Pontes Building Contractors</span></p>
+          <p className='mb-10 text-slate-600'>Welcome to <span className='font-bold underline'>Pontes Building Contractors</span></p>
           <h1 className='mb-5'>
             A <span className='font-bold'>Company</span> that specializes in <span className='font-bold'>Construction and Repair</span> of all <span className='font-bold'>Housing Utilities</span> in Algarve.
           </h1>
