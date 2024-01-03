@@ -9,18 +9,23 @@ import ImageParallax from '../img/parallax-img.jpg';
 export default function Contact() {
   const [sendMessage, setSendMessage] = useState("");
   const [isChecked, setIsChecked] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
     if (isChecked) {
-    emailjs.sendForm(import.meta.env.VITE_service_ID, import.meta.env.VITE_template_ID, form.current, import.meta.env.VITE_public_key)
+    setLoading(true)
+    await emailjs.sendForm(import.meta.env.VITE_service_ID, import.meta.env.VITE_template_ID, form.current, import.meta.env.VITE_public_key)
       .then((result) => {
           setSendMessage("success")
+          setLoading(false)
           e.target.reset()
           //console.log(result.text)
       }, (error) => {
           setSendMessage("failed")
+          setLoading(false)
           //console.log(error.text);
       });
     } else {
@@ -78,7 +83,7 @@ export default function Contact() {
                   <input type="checkbox" id='checkbox' name='checkbox' value={isChecked} onChange={handleChange} />
                 </div>
                 <div className="">
-                  <input type="submit" value='Send Message' className='bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 rounded cursor-pointer'/>
+                  <button type='submit' value='Send Message' className='bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 rounded cursor-pointer'>{loading ? 'Sending...' : 'Send Message'}</button>
                 </div>
               </form>
               {sendMessage === "success" && (
