@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { FaPhoneAlt, FaFacebook } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -7,11 +8,13 @@ import ImageParallax from '../img/parallax-img.jpg';
 
 export default function Contact() {
   const [sendMessage, setSendMessage] = useState("");
+  const [isChecked, setIsChecked] = useState(false);
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.sendForm(import.meta.env.service_ID, import.meta.env.template_ID, form.current, import.meta.env.public_key)
+    if (isChecked) {
+    emailjs.sendForm(import.meta.env.VITE_service_ID, import.meta.env.VITE_template_ID, form.current, import.meta.env.VITE_public_key)
       .then((result) => {
           setSendMessage("success")
           e.target.reset()
@@ -20,6 +23,17 @@ export default function Contact() {
           setSendMessage("failed")
           //console.log(error.text);
       });
+    } else {
+      setSendMessage("failed")
+    }
+  };
+
+  const handleChange = event => {
+    if (event.target.checked) {
+      setIsChecked(true)
+    } else {
+      setIsChecked(false)
+    }
   };
 
   return (
@@ -57,18 +71,22 @@ export default function Contact() {
                 </div>
                 <div className="flex flex-col gap-1">
                   <label htmlFor="message">Message:</label>
-                  <textarea name='message' placeholder='Enter your message here...' id='message' className="p-2 rounded-md" autoComplete='off' rows='5' required></textarea>
+                  <textarea name='message' placeholder='Enter your message here...' id='message' className="p-2 rounded-md" autoComplete='off' rows='3' required></textarea>
+                </div>
+                <div className="flex flex-row flex-wrap gap-2">
+                  <label htmlFor="checkbox">I Agree to the <Link to='/policy' className='text-blue-700 hover:underline'>Privacy Policy</Link></label>
+                  <input type="checkbox" id='checkbox' name='checkbox' value={isChecked} onChange={handleChange} />
                 </div>
                 <div className="">
                   <input type="submit" value='Send Message' className='bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 rounded cursor-pointer'/>
                 </div>
               </form>
               {sendMessage === "success" && (
-                <div className="text-green-800 p-2">
+                <div className="text-green-800">
                   <p>Message Successfully sent!</p>
                 </div>
               )} {sendMessage === "failed" && (
-                <div className="text-red-800 p-2">
+                <div className="text-red-800">
                   <p>Message not sent, please try again!</p>
                 </div>
               )} 
